@@ -13,6 +13,9 @@
         "symfony/var-dumper": "^5.3"
     },
     "autoload": {
+        "files": [
+            "src/functions.php"
+        ],
         "psr-4": {
             "FriendsOfHyperf\\Stringable\\": "src/"
         }

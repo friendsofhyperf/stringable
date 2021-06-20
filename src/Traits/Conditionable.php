@@ -1,5 +1,13 @@
 <?php
 
+declare(strict_types=1);
+/**
+ * This file is part of stringable.
+ *
+ * @link     https://github.com/friendsofhyperf/stringable
+ * @document https://github.com/friendsofhyperf/stringable/blob/main/README.md
+ * @contact  huangdijia@gmail.com
+ */
 namespace FriendsOfHyperf\Stringable\Traits;
 
 trait Conditionable
@@ -7,9 +15,9 @@ trait Conditionable
     /**
      * Apply the callback if the given "value" is truthy.
      *
-     * @param  mixed  $value
-     * @param  callable  $callback
-     * @param  callable|null  $default
+     * @param mixed $value
+     * @param callable $callback
+     * @param null|callable $default
      *
      * @return mixed
      */
@@ -17,7 +25,8 @@ trait Conditionable
     {
         if ($value) {
             return $callback($this, $value) ?: $this;
-        } elseif ($default) {
+        }
+        if ($default) {
             return $default($this, $value) ?: $this;
         }
 
@@ -27,9 +36,9 @@ trait Conditionable
     /**
      * Apply the callback if the given "value" is falsy.
      *
-     * @param  mixed  $value
-     * @param  callable  $callback
-     * @param  callable|null  $default
+     * @param mixed $value
+     * @param callable $callback
+     * @param null|callable $default
      *
      * @return mixed
      */
@@ -37,7 +46,8 @@ trait Conditionable
     {
         if (! $value) {
             return $callback($this, $value) ?: $this;
-        } elseif ($default) {
+        }
+        if ($default) {
             return $default($this, $value) ?: $this;
         }
 

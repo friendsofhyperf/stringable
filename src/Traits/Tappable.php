@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 /**
- * This file is part of hyperf/helpers.
+ * This file is part of stringable.
  *
- * @link     https://github.com/friendsofhyperf/helpers
- * @document https://github.com/friendsofhyperf/helpers/blob/main/README.md
+ * @link     https://github.com/friendsofhyperf/stringable
+ * @document https://github.com/friendsofhyperf/stringable/blob/main/README.md
  * @contact  huangdijia@gmail.com
  */
 namespace FriendsOfHyperf\Stringable\Traits;
