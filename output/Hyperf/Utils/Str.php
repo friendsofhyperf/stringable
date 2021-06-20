@@ -8,17 +8,17 @@ declare(strict_types=1);
  * @document https://github.com/friendsofhyperf/stringable/blob/main/README.md
  * @contact  huangdijia@gmail.com
  */
-namespace Hyperf\Utils {
-    use FriendsOfHyperf\Stringable\Stringable;
+namespace Hyperf\Utils;
 
-    class Str
+use FriendsOfHyperf\Stringable\Stringable;
+
+class Str
+{
+    /**
+     * @param string $value
+     */
+    public static function of($value): Stringable
     {
-        public static function of($value): Stringable
-        {
-            return new Stringable($value);
-        }
+        return new Stringable($value);
     }
-}
-
-namespace {
 }
