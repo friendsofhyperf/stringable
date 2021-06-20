@@ -13,7 +13,7 @@ namespace Hyperf\Utils {
 
     class Str
     {
-        public function of($value): Stringable
+        public static function of($value): Stringable
         {
             return new Stringable($value);
         }
