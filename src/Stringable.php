@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 /**
- * This file is part of hyperf/helpers.
+ * This file is part of stringable.
  *
- * @link     https://github.com/friendsofhyperf/helpers
- * @document https://github.com/friendsofhyperf/helpers/blob/main/README.md
+ * @link     https://github.com/friendsofhyperf/stringable
+ * @document https://github.com/friendsofhyperf/stringable/blob/main/README.md
  * @contact  huangdijia@gmail.com
  */
 namespace FriendsOfHyperf\Stringable;
@@ -230,7 +230,7 @@ class Stringable implements JsonSerializable
      *
      * @param string $delimiter
      * @param int $limit
-     * @return \Illuminate\Support\Collection
+     * @return \Hyperf\Utils\Collection
      */
     public function explode($delimiter, $limit = PHP_INT_MAX)
     {
@@ -243,7 +243,7 @@ class Stringable implements JsonSerializable
      * @param int|string $pattern
      * @param int $limit
      * @param int $flags
-     * @return \Illuminate\Support\Collection
+     * @return \Hyperf\Utils\Collection
      */
     public function split($pattern, $limit = -1, $flags = 0)
     {
@@ -382,7 +382,7 @@ class Stringable implements JsonSerializable
      * Get the string matching the given pattern.
      *
      * @param string $pattern
-     * @return \Illuminate\Support\Collection
+     * @return \Hyperf\Utils\Collection
      */
     public function matchAll($pattern)
     {
