@@ -11,8 +11,6 @@ declare(strict_types=1);
 namespace FriendsOfHyperf\Stringable;
 
 use Closure;
-use FriendsOfHyperf\Stringable\Traits\Conditionable;
-use FriendsOfHyperf\Stringable\Traits\Tappable;
 use Hyperf\Utils\Str;
 use Hyperf\Utils\Traits\Macroable;
 use JsonSerializable;
@@ -20,9 +18,9 @@ use Symfony\Component\VarDumper\VarDumper;
 
 class Stringable implements JsonSerializable
 {
-    use Conditionable;
+    use Traits\Conditionable;
     use Macroable;
-    use Tappable;
+    use Traits\Tappable;
 
     /**
      * The underlying string value.
