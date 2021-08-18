@@ -734,6 +734,17 @@ class Stringable implements JsonSerializable
     }
 
     /**
+     * Replaces the first or the last ones chars from a string by a given char.
+     *
+     * @param int $offset if is negative it starts from the end
+     * @param string $replacement default is *
+     */
+    public function mask(int $offset = 0, int $length = 0, string $replacement = '*')
+    {
+        return new static(Str::mask($this->value, $offset, $length, $replacement));
+    }
+
+    /**
      * Execute the given callback if the string is empty.
      *
      * @param callable $callback
