@@ -10,7 +10,11 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.14",
-        "phpstan/phpstan": "^0.12"
+        "phpstan/phpstan": "^0.12",
+        "phpunit/phpunit": "^7.0|^8.0|^9.0|^10.0",
+        "hyperf/di": "^2.1",
+        "hyperf/config": "^2.1",
+        "hyperf/event": "^2.1"
     },
     "autoload": {
         "files": [
@@ -18,6 +22,11 @@
         ],
         "psr-4": {
             "FriendsOfHyperf\\Stringable\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FriendsOfHyperf\\Stringable\\Tests\\": "tests/"
         }
     },
     "extra": {
@@ -31,6 +40,7 @@
         "email": "huangdijia@gmail.com"
     }],
     "scripts": {
+        "test": "phpunit -c phpunit.xml --colors=always",
         "cs-fix": "php-cs-fixer fix $1",
         "analyse": "phpstan analyse --memory-limit 300M -l 0 -c phpstan.neon ./src"
     }

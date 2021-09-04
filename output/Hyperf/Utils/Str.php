@@ -164,4 +164,14 @@ class Str
     public static function isAscii($value)
     {
     }
+
+    /**
+     * Determine if a given string is a valid UUID.
+     *
+     * @param string $value
+     * @return bool
+     */
+    public static function isUuid($value)
+    {
+    }
 }
