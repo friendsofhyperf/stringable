@@ -8,12 +8,12 @@ declare(strict_types=1);
  * @document https://github.com/friendsofhyperf/stringable/blob/main/README.md
  * @contact  huangdijia@gmail.com
  */
-if (! function_exists('string')) {
+if (! function_exists('stringable')) {
     /**
      * @param string $value
      * @return \FriendsOfHyperf\Stringable\Stringable
      */
-    function string($value)
+    function stringable($value)
     {
         return new \FriendsOfHyperf\Stringable\Stringable($value);
     }

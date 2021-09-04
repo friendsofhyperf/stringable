@@ -14,3 +14,10 @@ The stringable for hyperf.
 ```bash
 composer require friendsofhyperf/stringable
 ```
+
+- Usage
+
+```php
+$str = Str::of('Hello World')->upper()->__toString();
+$str = stringable('Hello World')->upper()->__toString();
+```
