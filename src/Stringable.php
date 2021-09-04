@@ -14,7 +14,6 @@ use Closure;
 use Hyperf\Utils\Str;
 use Hyperf\Utils\Traits\Macroable;
 use JsonSerializable;
-use Symfony\Component\VarDumper\VarDumper;
 
 class Stringable implements JsonSerializable
 {
@@ -798,28 +797,6 @@ class Stringable implements JsonSerializable
     public function wordCount()
     {
         return str_word_count($this->value);
-    }
-
-    /**
-     * Dump the string.
-     *
-     * @return $this
-     */
-    public function dump()
-    {
-        VarDumper::dump($this->value);
-
-        return $this;
-    }
-
-    /**
-     * Dump the string and end the script.
-     */
-    public function dd()
-    {
-        $this->dump();
-
-        exit(1);
     }
 
     /**
