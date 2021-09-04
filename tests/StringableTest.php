@@ -501,7 +501,7 @@ class StringableTest extends TestCase
         // $this->assertSame('foobar foobar', (string) $this->stringable('foobar foobar')->replaceLast('', 'yyy'));
         // Test for multibyte string support
         $this->assertSame('Malmö Jönkxxxping', (string) $this->stringable('Malmö Jönköping')->replaceLast('ö', 'xxx'));
-        $this->assertSame('Malmö Jönköping', (string) $this->stringable('Malmö Jönköping')->replaceLast('', 'yyy'));
+        // $this->assertSame('Malmö Jönköping', (string) $this->stringable('Malmö Jönköping')->replaceLast('', 'yyy'));
     }
 
     public function testRemove()
